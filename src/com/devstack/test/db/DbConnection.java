@@ -14,7 +14,7 @@ public class DbConnection {
                 "jdbc:mysql://localhost:3306/dsmp_3_test","root", "1234"
         );
     }
-    private static DbConnection getInstance() throws SQLException, ClassNotFoundException {
+    public static DbConnection getInstance() throws SQLException, ClassNotFoundException {
         return (dbConnection == null)?dbConnection=new DbConnection():dbConnection;
     }
     public Connection getConnection(){
